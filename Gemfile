@@ -4,12 +4,17 @@ gem "rails", "4.2.0"
 gem "rails-api"
 gem "pg"
 
-group :development do
+group :development, :test do
+  gem "byebug"
+  gem "web-console", "~> 2.0"
   gem "spring"
+  gem "rspec-rails", "~> 3.0"
+  gem "capybara"
+  gem "shoulda"
+  gem "shoulda-matchers", require: false
+  gem "factory_girl_rails"
+  gem "database_cleaner"
 end
-
-# To use ActiveModel has_secure_password
-# gem "bcrypt", "~> 3.1.7"
 
 # To use Jbuilder templates for JSON
 # gem "jbuilder"
@@ -19,6 +24,3 @@ end
 
 # Deploy with Capistrano
 # gem "capistrano", :group => :development
-
-# To use debugger
-# gem "ruby-debug19", :require => "ruby-debug"
