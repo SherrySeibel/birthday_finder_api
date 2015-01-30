@@ -16,7 +16,7 @@ group :test do
   gem "shoulda"
   gem "factory_girl_rails"
   gem "database_cleaner"
-  gem "ffaker"
+  gem "faker"
 end
 
 gem "jbuilder"

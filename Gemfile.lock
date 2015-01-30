@@ -61,7 +61,8 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
-    ffaker (1.31.0)
+    faker (1.4.3)
+      i18n (~> 0.5)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
     hike (1.2.3)
@@ -166,7 +167,7 @@ DEPENDENCIES
   capybara
   database_cleaner
   factory_girl_rails
-  ffaker
+  faker
   jbuilder
   pg
   rails (= 4.2.0)
