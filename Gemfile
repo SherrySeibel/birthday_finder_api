@@ -8,16 +8,18 @@ group :development, :test do
   gem "byebug"
   gem "web-console", "~> 2.0"
   gem "spring"
+end
+
+group :test do
   gem "rspec-rails", "~> 3.0"
   gem "capybara"
   gem "shoulda"
-  gem "shoulda-matchers", require: false
   gem "factory_girl_rails"
   gem "database_cleaner"
+  gem "ffaker"
 end
 
-# To use Jbuilder templates for JSON
-# gem "jbuilder"
+gem "jbuilder"
 
 # Use unicorn as the app server
 # gem "unicorn"
