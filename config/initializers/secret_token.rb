@@ -16,4 +16,4 @@
 # Using secret_token for rails3 compatibility. Change to secret_key_base
 # to avoid deprecation warning.
 # Can be safely removed in a rails3 api-only application.
-BirthdayFinder::Application.config.secret_token = 'abcea474cca3ee1ad5cae629d660a70806c2be9afc980ff32541cecd22103278e14b7d469493d20b74a922744cface5ce93ac14179f759a220a294de3ed8fa65'
+BirthdayFinderApi::Application.config.secret_token = 'abcea474cca3ee1ad5cae629d660a70806c2be9afc980ff32541cecd22103278e14b7d469493d20b74a922744cface5ce93ac14179f759a220a294de3ed8fa65'
