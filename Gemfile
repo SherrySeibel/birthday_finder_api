@@ -21,6 +21,11 @@ end
 
 gem "jbuilder"
 
+gem "sabisu_rails", github: "IcaliaLabs/sabisu-rails"
+gem "compass-rails"
+gem "furatto"
+gem "font-awesome-rails"
+
 # Use unicorn as the app server
 # gem "unicorn"
 
