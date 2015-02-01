@@ -8,6 +8,9 @@ RSpec.describe Person, type: :model do
   let(:person) { FactoryGirl.build :person }
   subject { person }
 
+  it { should respond_to(:name) }
+  it { should respond_to(:date_of_birth) }
+
   it { should validate_presence_of(:name) }
   it { should_not allow_value("", nil).for(:name) }
 
