@@ -3,6 +3,8 @@ source "https://rubygems.org"
 gem "rails", "4.2.0"
 gem "rails-api"
 gem "pg"
+gem "monban"
+gem "monban-generators"
 
 group :development, :test do
   gem "byebug"
@@ -15,6 +17,7 @@ group :test do
   gem "capybara"
   gem "shoulda"
   gem "factory_girl_rails"
+  gem "valid_attribute"
   gem "database_cleaner"
   gem "ffaker"
 end
