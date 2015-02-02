@@ -2,6 +2,7 @@ ENV["RAILS_ENV"] ||= "test"
 require "spec_helper"
 require "capybara/rspec"
 require File.expand_path("../../config/environment", __FILE__)
+require "valid_attribute"
 require "rspec/rails"
 include FactoryGirl::Syntax::Default
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }

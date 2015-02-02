@@ -3,6 +3,13 @@ source "https://rubygems.org"
 gem "rails", "4.2.0"
 gem "rails-api"
 gem "pg"
+gem "monban"
+
+gem "sabisu_rails", github: "IcaliaLabs/sabisu-rails"
+gem "compass-rails"
+gem "furatto"
+gem "font-awesome-rails"
+gem "simple_form"
 
 group :development, :test do
   gem "byebug"
@@ -15,6 +22,7 @@ group :test do
   gem "capybara"
   gem "shoulda"
   gem "factory_girl_rails"
+  gem "valid_attribute"
   gem "database_cleaner"
   gem "ffaker"
 end
