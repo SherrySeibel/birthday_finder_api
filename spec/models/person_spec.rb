@@ -1,6 +1,10 @@
 require "rails_helper"
 
 RSpec.describe Person, type: :model do
+  it "should have a factory" do
+    expect(FactoryGirl.build(:person)).to be_valid
+  end
+
   let(:person) { FactoryGirl.build :person }
   subject { person }
 

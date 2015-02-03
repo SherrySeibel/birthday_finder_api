@@ -20,6 +20,7 @@ group :test do
 end
 
 gem "jbuilder"
+gem "responders", "~> 2.0"
 
 # Use unicorn as the app server
 # gem "unicorn"
