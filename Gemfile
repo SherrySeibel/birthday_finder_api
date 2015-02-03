@@ -4,6 +4,13 @@ gem "rails", "4.2.0"
 gem "rails-api"
 gem "pg"
 
+# Gems for exposing the API
+gem "active_model_serializers"
+gem "grape"
+gem "grape-active_model_serializers"
+gem "grape-swagger-rails"
+gem "rack-cors", require: "rack/cors"
+
 group :development, :test do
   gem "byebug"
   gem "web-console", "~> 2.0"
@@ -18,13 +25,5 @@ group :test do
   gem "database_cleaner"
   gem "faker"
   gem "populator"
+  gem "responders", "~> 2.0"
 end
-
-gem "jbuilder"
-gem "responders", "~> 2.0"
-
-# Use unicorn as the app server
-# gem "unicorn"
-
-# Deploy with Capistrano
-# gem "capistrano", :group => :development
