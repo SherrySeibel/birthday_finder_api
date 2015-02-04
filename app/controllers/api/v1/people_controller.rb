@@ -2,7 +2,11 @@ class API::V1::PeopleController < ApplicationController
   respond_to :json
 
   def show
-    respond_with Person.find(params[:id])
+    @person = Person.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render json: @person }
+    end
   end
 
   def create

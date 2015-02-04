@@ -24,7 +24,7 @@ RSpec.describe API::V1::PeopleController, type: :controller do
     it "saves a new person to the database" do
       expect {
         post :create, person: FactoryGirl.attributes_for(:person)
-      }.to change(Person, :count).by(1), format: :json
+      }.to change(Person, :count).by(1)
     end
   end
 
