@@ -5,6 +5,6 @@ class ApiConstraint
   end
 
   def matches?(req)
-    @default || req.headers['Accept'].include?("application/vnd.birthday_finder_api.v#{@version}")
+    @default || req.headers["Accept"].include?("application/vnd.birthday_finder_api.v#{@version}")
   end
 end

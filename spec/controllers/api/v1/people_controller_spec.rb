@@ -5,6 +5,14 @@ RSpec.describe API::V1::PeopleController, type: :controller do
     request.headers["Accept"] = "application/vnd.birthday_finder_api.v1"
   }
 
+  describe "Person API" do
+    it "can return a user by ID" do
+      @person = FactoryGirl.create(:person)
+
+      get :show, id: @person.id, format: :json
+    end
+  end
+
   describe "GET #show" do
     before(:each) do
       @person = FactoryGirl.create :person
@@ -18,14 +26,6 @@ RSpec.describe API::V1::PeopleController, type: :controller do
     end
 
     it { should respond_with 200 }
-  end
-
-  describe "POST #create" do
-    it "saves a new person to the database" do
-      expect {
-        post :create, person: FactoryGirl.attributes_for(:person)
-      }.to change(Person, :count).by(1)
-    end
   end
 
   describe "DELETE #destroy" do
