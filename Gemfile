@@ -20,3 +20,5 @@ group :test do
   gem "faker"
   gem "populator"
 end
+
+gem "active_model_serializers"
