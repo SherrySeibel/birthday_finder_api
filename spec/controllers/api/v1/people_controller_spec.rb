@@ -15,7 +15,7 @@ RSpec.describe API::V1::PeopleController, type: :controller do
 
   describe "GET #show" do
     before(:each) do
-      @person = FactoryGirl.create :person
+      @person = FactoryGirl.create(:person)
       get :show, id: @person.id, format: :json
     end
 
@@ -26,6 +26,14 @@ RSpec.describe API::V1::PeopleController, type: :controller do
     end
 
     it { should respond_with 200 }
+  end
+
+  describe "POST #create" do
+    it "saves a new person to the database" do
+      expect {
+        post :create, person: FactoryGirl.attributes_for(:person)
+      }.to change(Person, :count).by(1)
+    end
   end
 
   describe "DELETE #destroy" do

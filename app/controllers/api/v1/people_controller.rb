@@ -3,7 +3,12 @@ class API::V1::PeopleController < ApplicationController
 
   def show
     @person = Person.find(params[:id])
-   render json: @person
+    render json: @person
+  end
+
+  def index
+    @people = Person.all
+    render json: @people
   end
 
   def create
